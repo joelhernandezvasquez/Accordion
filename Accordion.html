@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accordion</title>
+	<link href="main.css" type="text/css" rel="stylesheet">
+	
+	
+	<script>
+	function handlePanel()
+		{
+		
+			
+			const span = this.firstElementChild;
+			const imagen = span.nextElementSibling;
+			const content = imagen.nextElementSibling;
+			
+			const plusSign = "SVG/iconfinder_069_Plus_183198.png";
+			const minusSign = "SVG/iconfinder_minus_1303882.png";
+			
+			
+			content.classList.toggle("visible");
+		
+			
+			if(imagen.src==="file:///C:/Users/jhern/Desktop/Javascript%20Zell's%20Course/Accordion/SVG/iconfinder_069_Plus_183198.png")
+				{
+					imagen.src = minusSign;
+				}
+			else
+			{
+				imagen.src = plusSign;
+			}
+		}
+		
+		
+		
+	
+	</script>
+</head>
+
+<body>
+	
+<div class="container-accordion">
+	
+	  <div class="panel" id="chessePanel">
+		
+		   <span> Cheese</span>
+		  <input type="image" src="SVG/iconfinder_069_Plus_183198.png">
+		  
+		  
+		    <div class="content">
+		  
+				<div class="image-content">
+				<img src="SVG/iconfinder_Cheese_379541.svg">
+					
+				</div>
+				
+				<div class="info-content">
+				<p class="text-content">Cheese is a food derived from milk that is produced in a wide range of flavors, textures, and forms by coagulation of the milk protein casein.</p>
+				</div>
+		  
+		    </div>
+		  
+		  
+		
+	  </div>
+		
+	<div class="panel" id="LettucePanel">
+		<span> Lettuce</span>
+		  <input type="image" src="SVG/iconfinder_069_Plus_183198.png">
+		
+			<div class="content">
+		  
+				<div class="image-content">
+				<img src="SVG/iconfinder_lettuce_leaves_food_taste_vegitables_green_tasty_3976731.png">
+					
+				</div>
+				
+				<div class="info-content ">
+				<p class="text-content">Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes
+
+          for its stem and seeds.</p>
+				</div>
+		  
+		    </div>
+		
+	  </div>
+		
+		
+	<div class="panel" id="TomatoPanel">
+		<span> Tomato</span>
+		  <input type="image" src="SVG/iconfinder_069_Plus_183198.png">
+		
+			<div class="content">
+		  
+				<div class="image-content">
+				<img src="SVG/iconfinder_tomato_slice_vegitable_veg_food_tasty_healthy_3976736.png">
+					
+				</div>
+				
+				<div class="info-content">
+				<p class="text-content">The tomato is the edible, often red, fruit of the plant Solanum lycopersicum, commonly known as a tomato plant.</p>
+				</div>
+		  
+		    </div>
+		
+	  </div>
+	
+	<div class="panel" id="BeefPanel">
+		
+		<span> Beef</span>
+		  <input type="image" src="SVG/iconfinder_069_Plus_183198.png">
+		
+			<div class="content">
+		  
+				<div class="image-content">
+				<img src="SVG/iconfinder_meat_beef_raw_food_fried_tasty_health_3976732.png">
+					
+				</div>
+				
+				<div class="info-content">
+				<p class="text-content"> Beef is the culinary name for meat from cattle, particularly skeletal muscle. Beef is a source of high-quality protein
+
+          and essential nutrients.</p>
+				</div>
+		  
+		    </div>
+	  </div>
+	
+	</div>
+	
+	<script>
+	  
+
+	// Using event delegation pattern
+
+	  const accordion = document.querySelector(".container-accordion");
+   
+	  accordion.addEventListener("click",e=>
+		{
+			
+			if(e.target.matches("div"))
+			{
+			  
+			const span = e.target.firstElementChild;
+			const imagen = span.nextElementSibling;
+			const content = imagen.nextElementSibling;
+			
+			const plusSign = "SVG/iconfinder_069_Plus_183198.png";
+			const minusSign = "SVG/iconfinder_minus_1303882.png";
+			
+			
+			content.classList.toggle("visible");
+		
+			
+			if(imagen.src==="file:///C:/Users/jhern/Desktop/Javascript%20Zell's%20Course/Accordion/SVG/iconfinder_069_Plus_183198.png")
+				{
+					imagen.src = minusSign;
+				}
+			else
+			{
+				imagen.src = plusSign;
+			}
+			}
+		}
+		);
+		
+
+	
+	
+	</script>
+</body>
+</html>
